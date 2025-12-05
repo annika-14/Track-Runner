@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".GameActivity">
+
+    <!-- Top HUD Bar -->
+    <LinearLayout
+        android:id="@+id/hudBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/background_darker"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Score -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SCORE: 0"
+            android:textColor="@color/neon_cyan"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Lives -->
+        <TextView
+            android:id="@+id/livesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❤️❤️❤️"
+            android:textSize="20sp"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Pause Button -->
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/pause"
+            android:textSize="12sp"
+            android:backgroundTint="@color/neon_purple"
+            android:textColor="@color/white"
+            android:minWidth="80dp" />
+    </LinearLayout>
+
+    <!-- Difficulty Progress Bar (New GUI Component #1) -->
+    <TextView
+        android:id="@+id/difficultyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIFFICULTY"
+        android:textColor="@color/neon_yellow"
+        android:textSize="10sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hudBar" />
+
+    <ProgressBar
+        android:id="@+id/difficultyProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/neon_yellow"
+        android:progressBackgroundTint="@color/text_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/difficultyLabel" />
+
+    <!-- Game View Container -->
+    <FrameLayout
+        android:id="@+id/gameViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/difficultyProgress"
+        app:layout_constraintBottom_toTopOf="@id/controlsContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Controls Container -->
+    <LinearLayout
+        android:id="@+id/controlsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@color/background_darker"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Left Button -->
+        <Button
+            android:id="@+id/leftButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="◀ LEFT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_cyan"
+            android:textColor="@color/background_dark" />
+
+        <!-- Right Button -->
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="RIGHT ▶"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_cyan"
+            android:textColor="@color/background_dark" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

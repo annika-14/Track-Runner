@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TrackObstacleCourse" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neon_cyan</item>
+        <item name="colorPrimaryDark">@color/background_darker</item>
+        <item name="colorAccent">@color/neon_pink</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">@color/background_darker</item>
+        <item name="android:navigationBarColor">@color/background_darker</item>
+    </style>
+
+    <style name="Theme.TrackObstacleCourse" parent="Base.Theme.TrackObstacleCourse" />
+</resources>

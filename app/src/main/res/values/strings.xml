@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Track Runner</string>
+    
+    <!-- Main Menu -->
+    <string name="game_title">TRACK\nRUNNER</string>
+    <string name="game_subtitle">Dodge the obstacles!</string>
+    <string name="start_game">START GAME</string>
+    <string name="preferences">SETTINGS</string>
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="high_score_default">HIGH SCORE: 0</string>
+    <string name="high_score_format">HIGH SCORE: %d</string>
+    
+    <!-- Game Screen -->
+    <string name="score_label">SCORE</string>
+    <string name="lives_label">LIVES</string>
+    <string name="pause">PAUSE</string>
+    <string name="resume">RESUME</string>
+    
+    <!-- Game Over -->
+    <string name="game_over">GAME OVER</string>
+    <string name="final_score">FINAL SCORE: %d</string>
+    <string name="new_high_score">NEW HIGH SCORE!</string>
+    <string name="play_again">PLAY AGAIN</string>
+    <string name="main_menu">MAIN MENU</string>
+    <string name="submit_score">SUBMIT SCORE</string>
+    
+    <!-- Preferences -->
+    <string name="settings_title">SETTINGS</string>
+    <string name="theme_label">Color Theme</string>
+    <string name="lives_setting">Starting Lives</string>
+    <string name="difficulty_label">Difficulty</string>
+    <string name="sound_label">Sound Effects</string>
+    <string name="vibration_label">Vibration</string>
+    <string name="player_name">Player Name</string>
+    <string name="save_settings">SAVE</string>
+    
+    <!-- Themes -->
+    <string name="theme_neon">Neon</string>
+    <string name="theme_retro">Retro</string>
+    <string name="theme_minimal">Minimal</string>
+    
+    <!-- Difficulty -->
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_normal">Normal</string>
+    <string name="difficulty_hard">Hard</string>
+    
+    <!-- Leaderboard -->
+    <string name="leaderboard_title">LEADERBOARD</string>
+    <string name="no_scores">No scores yet!</string>
+    <string name="loading">Loading…</string>
+    <string name="rank_format">#%d</string>
+    <string name="score_entry_format">%s - %d pts</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Neon Theme Colors -->
+    <color name="background_dark">#0D0D1A</color>
+    <color name="background_darker">#080810</color>
+    <color name="neon_cyan">#00F5FF</color>
+    <color name="neon_pink">#FF1493</color>
+    <color name="neon_purple">#9B30FF</color>
+    <color name="neon_yellow">#FFFF00</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="neon_orange">#FF6600</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0C0</color>
+    
+    <!-- Game Elements -->
+    <color name="track_line">#00F5FF</color>
+    <color name="player_color">#00F5FF</color>
+    <color name="obstacle_color">#FF1493</color>
+    <color name="heart_color">#FF1493</color>
+    
+    <!-- UI Elements -->
+    <color name="button_primary">#00F5FF</color>
+    <color name="button_secondary">#9B30FF</color>
+    <color name="progress_bar">#39FF14</color>
+</resources>

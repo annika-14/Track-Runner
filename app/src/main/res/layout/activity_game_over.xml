@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gameOverContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".GameOverActivity">
+
+        <!-- Game Over Title -->
+        <TextView
+            android:id="@+id/gameOverText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_over"
+            android:textSize="48sp"
+            android:textColor="@color/neon_pink"
+            android:textStyle="bold"
+            android:shadowColor="@color/neon_cyan"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp" />
+
+        <!-- Final Score -->
+        <TextView
+            android:id="@+id/finalScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FINAL SCORE: 0"
+            android:textSize="28sp"
+            android:textColor="@color/neon_cyan"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/gameOverText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- New High Score Badge -->
+        <TextView
+            android:id="@+id/newHighScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_high_score"
+            android:textSize="20sp"
+            android:textColor="@color/neon_yellow"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/finalScoreText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Rating Section (New GUI Component #2) -->
+        <TextView
+            android:id="@+id/rateGameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate this game:"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/newHighScoreText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <RatingBar
+            android:id="@+id/gameRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            android:progressTint="@color/neon_yellow"
+            android:progressBackgroundTint="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/rateGameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/ratingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="@color/neon_yellow"
+            app:layout_constraintTop_toBottomOf="@id/gameRatingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Player Name Input for Leaderboard -->
+        <EditText
+            android:id="@+id/playerNameInput"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:hint="Enter your name"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:backgroundTint="@color/neon_cyan"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:gravity="center"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/ratingLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Submit Score Button -->
+        <Button
+            android:id="@+id/submitScoreButton"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:text="@string/submit_score"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_green"
+            android:textColor="@color/background_dark"
+            app:layout_constraintTop_toBottomOf="@id/playerNameInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Play Again Button -->
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:text="@string/play_again"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_cyan"
+            android:textColor="@color/background_dark"
+            app:layout_constraintTop_toBottomOf="@id/submitScoreButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Main Menu Button -->
+        <Button
+            android:id="@+id/mainMenuButton"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:text="@string/main_menu"
+            android:textSize="16sp"
+            android:backgroundTint="@color/neon_purple"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/playAgainButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

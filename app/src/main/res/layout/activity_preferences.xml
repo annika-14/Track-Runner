@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/preferencesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".PreferencesActivity">
+
+        <!-- Settings Title -->
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textSize="36sp"
+            android:textColor="@color/neon_cyan"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Theme Selection -->
+        <TextView
+            android:id="@+id/themeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_label"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toBottomOf="@id/settingsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="40dp" />
+
+        <Spinner
+            android:id="@+id/themeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/neon_cyan"
+            android:popupBackground="@color/background_darker"
+            app:layout_constraintTop_toBottomOf="@id/themeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Lives Selection (SeekBar - New GUI Component #1) -->
+        <TextView
+            android:id="@+id/livesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lives_setting"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toBottomOf="@id/themeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/livesValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="24sp"
+            android:textColor="@color/neon_pink"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/livesLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <SeekBar
+            android:id="@+id/livesSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:min="0"
+            android:max="4"
+            android:progress="2"
+            android:progressTint="@color/neon_pink"
+            android:thumbTint="@color/neon_pink"
+            app:layout_constraintTop_toBottomOf="@id/livesLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/livesValueText"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/livesHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 - 5 lives"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/livesSeekBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Difficulty Selection -->
+        <TextView
+            android:id="@+id/difficultyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difficulty_label"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toBottomOf="@id/livesHint"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <Spinner
+            android:id="@+id/difficultySpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/neon_purple"
+            android:popupBackground="@color/background_darker"
+            app:layout_constraintTop_toBottomOf="@id/difficultyLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Vibration Toggle -->
+        <TextView
+            android:id="@+id/vibrationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vibration_label"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toBottomOf="@id/difficultySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <Switch
+            android:id="@+id/vibrationSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/neon_green"
+            android:trackTint="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/difficultySpinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="@string/save_settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_cyan"
+            android:textColor="@color/background_dark"
+            app:layout_constraintTop_toBottomOf="@id/vibrationSwitch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="BACK"
+            android:textSize="16sp"
+            android:backgroundTint="@color/neon_purple"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/saveButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
