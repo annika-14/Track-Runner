@@ -5,7 +5,7 @@
     android:id="@+id/gameContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="?attr/background_dark_u"
     tools:context=".GameActivity">
 
     <!-- Top HUD Bar -->
@@ -16,7 +16,7 @@
         android:orientation="horizontal"
         android:padding="16dp"
         android:gravity="center_vertical"
-        android:background="@color/background_darker"
+        android:background="?attr/background_darker_u"
         app:layout_constraintTop_toTopOf="parent">
 
         <!-- Score -->
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="SCORE: 0"
-            android:textColor="@color/neon_cyan"
+            android:textColor="?attr/cyan_u"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -46,8 +46,8 @@
             android:layout_height="40dp"
             android:text="@string/pause"
             android:textSize="12sp"
-            android:backgroundTint="@color/neon_purple"
-            android:textColor="@color/white"
+            android:backgroundTint="?attr/purple_u"
+            android:textColor="?attr/white_u"
             android:minWidth="80dp" />
     </LinearLayout>
 
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DIFFICULTY"
-        android:textColor="@color/neon_yellow"
+        android:textColor="?attr/yellow_u"
         android:textSize="10sp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -74,8 +74,8 @@
         android:layout_marginTop="4dp"
         android:max="100"
         android:progress="0"
-        android:progressTint="@color/neon_yellow"
-        android:progressBackgroundTint="@color/text_secondary"
+        android:progressTint="?attr/yellow_u"
+        android:progressBackgroundTint="?attr/text_secondary_u"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/difficultyLabel" />
@@ -99,7 +99,7 @@
         android:orientation="horizontal"
         android:padding="16dp"
         android:gravity="center"
-        android:background="@color/background_darker"
+        android:background="?attr/background_darker_u"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <!-- Left Button -->
@@ -112,8 +112,8 @@
             android:text="◀ LEFT"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:backgroundTint="@color/neon_cyan"
-            android:textColor="@color/background_dark" />
+            android:backgroundTint="?attr/cyan_u"
+            android:textColor="?attr/background_dark_u" />
 
         <!-- Right Button -->
         <Button
@@ -125,8 +125,8 @@
             android:text="RIGHT ▶"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:backgroundTint="@color/neon_cyan"
-            android:textColor="@color/background_dark" />
+            android:backgroundTint="?attr/cyan_u"
+            android:textColor="?attr/background_dark_u" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
