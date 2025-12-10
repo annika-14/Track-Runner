@@ -5,8 +5,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="?attr/background_dark_u"
     tools:context=".MainActivity">
+
+    <!-- Decorative Track Lines Preview -->
+    <View
+        android:id="@+id/trackLine1"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="?attr/track_line_u"
+        android:alpha="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="80dp" />
+
+    <View
+        android:id="@+id/trackLine2"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="?attr/track_line_u"
+        android:alpha="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/trackLine3"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="?attr/track_line_u"
+        android:alpha="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="80dp" />
 
     <!-- Game Title -->
     <TextView
@@ -15,10 +49,10 @@
         android:layout_height="wrap_content"
         android:text="@string/game_title"
         android:textSize="48sp"
-        android:textColor="@color/neon_cyan"
+        android:textColor="?attr/cyan_u"
         android:textStyle="bold"
         android:fontFamily="sans-serif-black"
-        android:shadowColor="@color/neon_pink"
+        android:shadowColor="?attr/pink_u"
         android:shadowDx="4"
         android:shadowDy="4"
         android:shadowRadius="8"
@@ -38,7 +72,7 @@
         android:layout_height="wrap_content"
         android:text="@string/game_subtitle"
         android:textSize="18sp"
-        android:textColor="@color/text_secondary"
+        android:textColor="?attr/text_secondary_u"
         app:layout_constraintBottom_toTopOf="@+id/highScoreText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +86,7 @@
         android:layout_height="wrap_content"
         android:text="@string/high_score_default"
         android:textSize="16sp"
-        android:textColor="@color/neon_yellow"
+        android:textColor="?attr/yellow_u"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtitleText"
@@ -67,8 +101,8 @@
         android:text="@string/start_game"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:backgroundTint="@color/neon_cyan"
-        android:textColor="@color/background_dark"
+        android:backgroundTint="?attr/cyan_u"
+        android:textColor="?attr/background_dark_u"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highScoreText"
@@ -82,8 +116,8 @@
         android:layout_height="56dp"
         android:text="@string/preferences"
         android:textSize="16sp"
-        android:backgroundTint="@color/neon_purple"
-        android:textColor="@color/white"
+        android:backgroundTint="?attr/purple_u"
+        android:textColor="?attr/white_u"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startButton"
@@ -97,8 +131,8 @@
         android:layout_height="56dp"
         android:text="@string/leaderboard"
         android:textSize="16sp"
-        android:backgroundTint="@color/neon_pink"
-        android:textColor="@color/white"
+        android:backgroundTint="?attr/pink_u"
+        android:textColor="?attr/white_u"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preferencesButton"
@@ -116,39 +150,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
-
-    <!-- Decorative Track Lines Preview -->
-    <View
-        android:id="@+id/trackLine1"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:background="@color/track_line"
-        android:alpha="0.3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="80dp" />
-
-    <View
-        android:id="@+id/trackLine2"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:background="@color/track_line"
-        android:alpha="0.3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <View
-        android:id="@+id/trackLine3"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:background="@color/track_line"
-        android:alpha="0.3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="80dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
