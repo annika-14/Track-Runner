@@ -31,6 +31,8 @@ class LeaderboardActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(MainActivity.currentTheme)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leaderboard)
 
