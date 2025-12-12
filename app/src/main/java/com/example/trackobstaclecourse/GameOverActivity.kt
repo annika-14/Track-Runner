@@ -12,14 +12,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.trackobstaclecourse.MainActivity.Companion.currentTheme
 import com.google.firebase.database.FirebaseDatabase
+
 class GameOverActivity : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
     private var finalScore = 0
     private var isNewHighScore = false
 
+    private var activeTheme = MainActivity.currentTheme
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(MainActivity.currentTheme)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_over)
 
@@ -98,6 +104,15 @@ class GameOverActivity : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Don't auto-resume, let player decide
+        if (activeTheme != currentTheme) {
+            // If they are different, it means the user changed settings!
+            recreate() // Restart this screen to apply the new colors
         }
     }
 
