@@ -109,10 +109,8 @@ class GameOverActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        // Don't auto-resume, let player decide
         if (activeTheme != currentTheme) {
-            // If they are different, it means the user changed settings!
-            recreate() // Restart this screen to apply the new colors
+            recreate()
         }
     }
 
