@@ -55,7 +55,7 @@ A 3-track obstacle course Android game built with Kotlin for CMSC436.
 2. **File → Open** → Select `CMSC436-Final-Project` folder
 3. Click "Use Embedded JDK" if prompted
 4. Wait for Gradle sync to complete
-5. Click **▶ Run** or press `Shift + F10`
+5. Click **Run** or press `Shift + F10`
 
 ---
 
@@ -104,4 +104,5 @@ CMSC436-Final-Project/
 ## License
 
 This project is for educational purposes as part of CMSC436 coursework.
+
 
