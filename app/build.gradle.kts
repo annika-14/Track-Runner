@@ -1,9 +1,32 @@
 plugins {
+
+    // Add the Google services Gradle plugin
+    id("com.google.gms.google-services")
+
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    // Uncomment below line after adding google-services.json
-    // id("com.google.gms.google-services")
 }
+
+dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.android.gms:play-services-ads:22.6.0")
+
+    // RecyclerView for Leaderboard
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+}
+
 
 android {
     namespace = "com.example.trackobstaclecourse"
@@ -37,25 +60,3 @@ android {
     }
 }
 
-dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    
-    // Firebase (optional - uncomment after adding google-services.json)
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-    implementation("com.google.firebase:firebase-database-ktx")
-    implementation("com.google.firebase:firebase-analytics-ktx")
-    
-    // Google Ads (AdMob)
-    implementation("com.google.android.gms:play-services-ads:22.6.0")
-    
-    // RecyclerView for Leaderboard
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-    
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-}

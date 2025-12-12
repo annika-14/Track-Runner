@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876705133472",
+    "project_id": "cmsc436-final-project-21e8c",
+    "storage_bucket": "cmsc436-final-project-21e8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876705133472:android:5f809d16b56407b2a9aac5",
+        "android_client_info": {
+          "package_name": "com.example.trackobstaclecourse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIFvzOB4Nr02W9ChIR-hZZZKyDQge1iCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
